@@ -1,5 +1,13 @@
 const cursor = document.getElementById('cursor');
 const cursorBlur = document.getElementById('cursor-blur');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', ()=>{
+    navMenu.classList.toggle('nav-menu');
+    hamburger.classList.toggle('active');
+})
+
 document.addEventListener('mousemove', function (dets) {
     cursor.style.left = dets.x + 30 + 'px';
     cursor.style.top = dets.y + 'px';

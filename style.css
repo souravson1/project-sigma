@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb {
 
 #nav {
   position: fixed;
-  height: 100px;
+  min-height: 100px;
   width: 100%;
   /* background-color: red; */
   display: flex;
@@ -59,10 +59,10 @@ body::-webkit-scrollbar-thumb {
   z-index: 99;
   justify-content: center;
 }
-#nav>div{
+#nav .nav-menu{
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 50px;
 }
 #nav img {
@@ -71,6 +71,19 @@ body::-webkit-scrollbar-thumb {
 #nav h4 {
   text-transform: uppercase;
   font-weight: 500;
+}
+#nav .hamburger{
+  display: none;
+  cursor: pointer;
+}
+#nav .hamburger .bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
 }
 
 video {
@@ -327,17 +340,41 @@ video {
 }
 
 #page3 {
-  height: 100vh;
   width: 100%;
   background-color: #000;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
+  padding-top: 10%;
+    padding-bottom: 20%;
 }
-#page3 img {
-  position: absolute;
-  width: 60px;
+#page3 #insights{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#insights h1{
+  margin-bottom: 2rem;
+}
+#page3 #insights #row{
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#insights #row #left-col{
+  padding: 0 1rem;
+  width: 50%;
+}
+#insights #row h4{
+  margin-bottom: 1rem;
+}
+#insights #row #right-col{
+  padding: 0 1rem;
+  width: 50%;
 }
 #page4 {
   height: 30vh;
@@ -446,12 +483,40 @@ video {
 @media screen and (max-width: 768px) {
   #nav {
     width: 100vw;
-    height: 5rem;
+    /* height: 5rem; */
     padding: 0 1rem;
     justify-content: space-between;
   }
-  #nav>div {
-    display: none;
+  #nav .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  #nav .hamburger{
+    display: block;
+  }
+  #nav .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  #nav .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  #nav .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  #nav .nav-menu h4{
+    margin: 66px 0;
+  }
+  #nav .nav-menu.active{
+    position: fixed;
+    top: 200px;
+    left: 0;
   }
   video {
     width: 100vw;
@@ -494,6 +559,16 @@ video {
     width: 100%;
     height: 45%;
     margin-top: 20px;
+  }
+  #page3 #insights #row{
+    gap: 2rem;
+    width: 95%;
+  }
+  #page3 #insights #row #left-col{
+    width: 90%;
+  }
+  #page3 #insights #row #right-col{
+    width: 90%;
   }
   #page4 {
     height: 60vh;
