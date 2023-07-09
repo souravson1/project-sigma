@@ -1,0 +1,64 @@
+#nav .nav-menu .active {
+  color: #64ccc5;
+}
+header {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+header h1,
+header h4,
+header p {
+  position: relative;
+  z-index: 10;
+}
+header p {
+  width: 60%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  padding: 2rem;
+}
+
+section .section .row{
+  display: flex;
+  align-items: center;
+  margin: 10% 0;
+  justify-content: center;
+  flex-direction: column;
+}
+.section .row .inner-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section .row .inner-row .inner-col{
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.section .row .list-item{
+  text-align: left;
+}
+.section .row .list-item li{
+  margin-bottom: 10px;
+}

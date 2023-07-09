@@ -36,12 +36,12 @@ nav
         top: "-60px",
         duration: 0.5
     })
-    .from(['#page1 h1', '#page1 h2'], {
+    .from(['#page1 h1', '#page1 h2', '#header h1', '#header h4'], {
         opacity: 0,
         scale: 1.2,
         duration: 0.5
     })
-    .from('#page1 p', {
+    .from(['#page1 p', '#header p'], {
         opacity: 0,
         y: 20,
     })
@@ -65,7 +65,7 @@ gsap.to('#nav', {
         scrub: 1
     }
 })
-gsap.to('#main', {
+gsap.to(['#main', '#main2'], {
     backgroundColor: '#000',
     scrollTrigger: {
         trigger: '#main',
