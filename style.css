@@ -291,6 +291,10 @@ video {
   white-space: nowrap;
   margin-bottom: 20px;
 }
+.overlay h4 a{
+  text-decoration: none;
+  color: #000;
+}
 .overlay p {
   color: #000;
   font-size: 14px;
@@ -499,7 +503,7 @@ video {
   #nav .nav-menu{
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 0;
     gap: 0;
     flex-direction: column;
     background-color: #000;
@@ -520,11 +524,11 @@ video {
     transform: translateY(-8px) rotate(-45deg);
   }
   #nav .nav-menu h4{
-    margin: 66px 0;
+    margin: 30px 0;
   }
   #nav .nav-menu.active{
     position: fixed;
-    top: 200px;
+    top: 0;
     left: 0;
   }
   video {

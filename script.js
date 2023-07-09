@@ -4,8 +4,8 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
 hamburger.addEventListener('click', ()=>{
-    navMenu.classList.toggle('nav-menu');
     hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
 })
 
 document.addEventListener('mousemove', function (dets) {
