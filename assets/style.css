@@ -62,3 +62,8 @@ section .section .row{
 .section .row .list-item li{
   margin-bottom: 10px;
 }
+@media screen and (max-width: 768px){
+  .section .row .inner-row{
+    flex-direction: column;
+  }
+}
